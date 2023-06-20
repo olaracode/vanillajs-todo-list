@@ -5,6 +5,7 @@ body{
    font-family: 'Roboto', sans-serif;
 }
 
+
 .todo-container{
     display: flex;
     justify-content: center;
@@ -16,6 +17,27 @@ body{
     padding: 5vh 10vw;
     border-radius: 18px;
     background-color: white;
+    /* Add basic shadow for a card */
+    box-shadow: 3px 3px 3px 0px #2d2c2c3a;
+}
+
+#todo-list{
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list > li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.todo-controllers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 input{
@@ -56,21 +78,3 @@ button.delete:hover{
     border-color: #e74c3c;
 }
 
-#task-list{
-    list-style: none;
-    padding: 0;
-}
-
-#task-list > li{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #dddddd;
-}
-
-.todo-controllers {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}

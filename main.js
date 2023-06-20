@@ -1,26 +1,38 @@
+/** Tareas:
+ * 1. Crear una lista de tareas
+ * 2. Agregar una tarea a la lista
+ * 3. Borrar una tarea de la lista
+ */
+
 // Elementos del dom
-const taskElements = document.getElementById("task-list");
-const input = document.getElementById("task");
+const taskElements = document.getElementById("todo-list");
+const input = document.getElementById("todo");
 const button = document.getElementById("btn-add");
 
 // Tarea nueva y lista de tareas
 let newTask = "";
 let taskList = [];
 
+// Función para agregar una tarea
 function addTask() {
   if (newTask === "") return;
-  // Add the task to the list
+
+  // Añadir la nueva tarea a nuestra lista
   taskList.push(newTask);
+
   // Clear the input
   input.value = "";
   newTask = "";
+
+  // actualizar la lista de tareas en el DOM
+  updateTaskList();
 }
 
 // Función para crear el botón de borrar
 function createDeleteButton(index) {
   // se crea el elemento del DOM
   const deleteButton = document.createElement("button");
-  deleteButton.innerText = "Delete"; // Contenido del botón
+  deleteButton.innerHTML = `<i class="fa-solid fa-trash"></i>`; // Contenido del botón
   deleteButton.classList.add("delete"); // Se agrega la clase delete
 
   // Se agrega el evento click al botón de borrar
@@ -52,13 +64,10 @@ function updateTaskList() {
   });
 }
 
-// Event listeners
-
 input.addEventListener("change", (e) => {
   newTask = e.target.value;
 });
 
 button.addEventListener("click", () => {
   addTask();
-  updateTaskList();
 });

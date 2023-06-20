@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Todo-List-Vanilla.JS</title>
+    <script src="https://kit.fontawesome.com/e6b3ee50ed.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -16,16 +17,18 @@
 
           <input
           type="text"
-          id="task"
+          id="todo"
           name="task"
           placeholder="Una nueva tarea"
           />
           <button id="btn-add" class="primary">Agregar</button>
         </div>
-        <ul id="task-list">
+        <ul id="todo-list">
           <li>
             <span>Tarea de ejemplo</span>
-            <button class="delete">Eliminar</button>
+            <button class="delete">
+              <i class="fa-solid fa-trash"></i>
+            </button>
           </li>
         </ul>
       </div>
