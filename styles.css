@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+   background-color: #b2b4e8;
+   font-family: 'Roboto', sans-serif;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.todo-card{
+    padding: 5vh 10vw;
+    border-radius: 18px;
+    background-color: white;
+}
+
+input{
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 6px;
+    border-color: #f6f5f6;
+}
+
+button{
+    padding: 5px 10px;
+    border: 2px solid;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #f6f5f6;
+    box-shadow: 3px 3px 3px 0px #dddddd;
+}
+
+button.primary{
+    background-color: #6663cb;
+    color: white;
+    border-color: #a9a7da;
+}
+
+button.delete {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+button.delete:hover{
+    background-color: #f6f5f6;
+    box-shadow: 3px 3px 3px 0px #dddddd;
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+#task-list{
+    list-style: none;
+    padding: 0;
+}
+
+#task-list > li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.todo-controllers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
